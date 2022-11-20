@@ -1,5 +1,12 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
 
+<<<<<<< HEAD
 [node name="Root" type="Node2D"]
 
 [node name="Node2D" type="Node2D" parent="."]
+=======
+[ext_resource path="res://Node.gd" type="Script" id=1]
+
+[node name="Node" type="Node"]
+script = ExtResource( 1 )
+>>>>>>> c8e6f1a9a135d0e216ee1daf5b5d6951cb5e8e89
