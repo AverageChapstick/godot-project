@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Node.gd" type="Script" id=1]
+[ext_resource path="res://Art/earth.png" type="Texture" id=2]
 
 [sub_resource type="Gradient" id=2]
-offsets = PoolRealArray( 0, 0.294118, 0.764706, 1 )
+offsets = PoolRealArray( 0, 0.317647, 0.529412, 1 )
 colors = PoolColorArray( 0, 0, 0, 0, 0.866667, 1, 0.945098, 1, 0.866667, 1, 0.945098, 1, 0.976471, 1, 0.992157, 0 )
 
 [sub_resource type="GradientTexture" id=3]
@@ -29,5 +30,10 @@ color = Color( 0.0392157, 0.0980392, 0.160784, 1 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
 position = Vector2( 120, 72 )
-amount = 256
+amount = 128
+lifetime = 3.0
 process_material = SubResource( 1 )
+
+[node name="Earth" type="Sprite" parent="."]
+position = Vector2( 128, 64 )
+texture = ExtResource( 2 )
