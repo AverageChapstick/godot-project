@@ -2,6 +2,8 @@ extends Node
 
 var meteor_scene = preload("res://Scenes/Meteor.tscn")
 var meteor_speed = 50
+var earth_health = 28
+var station_health = 28
 
 func _process(_delta):
 #Closes the game
@@ -17,3 +19,9 @@ func _on_MeteorTimer_timeout():
 	meteor.linear_velocity = meteor_speed * meteor.position.direction_to($Earth.position)
 	add_child(meteor)
 	meteor.add_to_group("meteors")
+
+func earth_hit():
+	$HUD/EarthHealth/EarthHealthBar.frame = earth_health
+
+func station_hit():
+	$HUD/StationHealth/StationHealthBar.frame = station_health

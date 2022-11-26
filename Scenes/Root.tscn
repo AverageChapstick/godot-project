@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/Node.gd" type="Script" id=1]
 [ext_resource path="res://Art/earth.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/Mouse.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/EarthGravity.gd" type="Script" id=5]
 [ext_resource path="res://Art/moon.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.317647, 0.529412, 1 )
@@ -72,6 +73,7 @@ current = true
 environment = SubResource( 4 )
 
 [node name="Label" type="Label" parent="."]
+visible = false
 margin_right = 240.0
 margin_bottom = 24.0
 theme = SubResource( 5 )
@@ -80,6 +82,7 @@ text = "Untitled Gravity Game"
 align = 1
 
 [node name="Controls" type="Label" parent="."]
+visible = false
 margin_top = 93.0
 margin_right = 240.0
 margin_bottom = 135.0
@@ -135,11 +138,13 @@ shape = SubResource( 9 )
 autostart = true
 
 [node name="MeteorPath" type="Path2D" parent="."]
-position = Vector2( -16.0556, -16.4176 )
-scale = Vector2( 0.264757, 0.274725 )
+position = Vector2( 23.8889, 21.7582 )
+scale = Vector2( 0.185764, 0.152473 )
 curve = SubResource( 10 )
 
 [node name="MeteorSpawnLocation" type="PathFollow2D" parent="MeteorPath"]
 position = Vector2( -64, -64 )
+
+[node name="HUD" parent="." instance=ExtResource( 7 )]
 
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_MeteorTimer_timeout"]

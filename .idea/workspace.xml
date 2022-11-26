@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="Polishing">
-      <change beforePath="$PROJECT_DIR$/Scenes/Meteor.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Meteor.tscn" afterDir="false" />
+    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="More prototyping">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.import/icon.png-df6bafeb8f0f5a872b74707f23c5f4ef.md5" beforeDir="false" afterPath="$PROJECT_DIR$/.import/icon.png-df6bafeb8f0f5a872b74707f23c5f4ef.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.import/icon.png-df6bafeb8f0f5a872b74707f23c5f4ef.stex" beforeDir="false" afterPath="$PROJECT_DIR$/.import/icon.png-df6bafeb8f0f5a872b74707f23c5f4ef.stex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Art/icon.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Art/icon.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/Root.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Root.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Node.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Node.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,13 +26,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kevch/Documents/Andrew/No Name Yet&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/fred/Godot3/GravityGame"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -163,14 +168,7 @@
       <option name="project" value="LOCAL" />
       <updated>1669490978675</updated>
     </task>
-    <task id="LOCAL-00019" summary="Polishing">
-      <created>1669491502101</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1669491502101</updated>
-    </task>
-    <option name="localTasksCounter" value="20" />
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,7 +200,6 @@
     <MESSAGE value="Mouse is moon" />
     <MESSAGE value="Title Centre" />
     <MESSAGE value="More prototyping" />
-    <MESSAGE value="Polishing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Polishing" />
+    <option name="LAST_COMMIT_MESSAGE" value="More prototyping" />
   </component>
 </project>
