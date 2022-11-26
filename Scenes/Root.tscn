@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/Node.gd" type="Script" id=1]
 [ext_resource path="res://Art/earth.png" type="Texture" id=2]
 [ext_resource path="res://Art/new_dynamicfont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Scenes/Mouse.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/EarthGravity.gd" type="Script" id=5]
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.317647, 0.529412, 1 )
@@ -30,6 +31,14 @@ glow_hdr_threshold = 0.1
 [sub_resource type="Theme" id=5]
 default_font = ExtResource( 3 )
 
+[sub_resource type="CircleShape2D" id=6]
+radius = 16.0
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 65.0692
+
+[sub_resource type="CircleShape2D" id=8]
+
 [node name="Node" type="Node"]
 script = ExtResource( 1 )
 
@@ -43,10 +52,6 @@ position = Vector2( 120, 68 )
 amount = 128
 lifetime = 3.0
 process_material = SubResource( 1 )
-
-[node name="Earth" type="Sprite" parent="."]
-position = Vector2( 120, 68 )
-texture = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 120, 68 )
@@ -63,3 +68,30 @@ custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
 text = "TEXT"
 
 [node name="MousePosition" parent="." instance=ExtResource( 4 )]
+
+[node name="Earth" type="StaticBody2D" parent="."]
+position = Vector2( 120, 68 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth"]
+shape = SubResource( 6 )
+
+[node name="EarthSprite" type="Sprite" parent="Earth"]
+texture = ExtResource( 2 )
+
+[node name="EarthGravity" type="Area2D" parent="Earth"]
+space_override = 1
+gravity_point = true
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/EarthGravity"]
+shape = SubResource( 7 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2( 52, 79 )
+can_sleep = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 8 )
