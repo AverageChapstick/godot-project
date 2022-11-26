@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/Node.gd" type="Script" id=1]
 [ext_resource path="res://Art/earth.png" type="Texture" id=2]
 [ext_resource path="res://Art/new_dynamicfont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Scenes/Mouse.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/EarthGravity.gd" type="Script" id=5]
+[ext_resource path="res://Art/icon.png" type="Texture" id=6]
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.317647, 0.529412, 1 )
@@ -65,7 +66,7 @@ margin_right = 48.0
 margin_bottom = 24.0
 theme = SubResource( 5 )
 custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
-text = "TEXT"
+text = "Untitled Gravity Game"
 
 [node name="MousePosition" parent="." instance=ExtResource( 4 )]
 
@@ -94,12 +95,16 @@ gravity = 10.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/EarthGravity"]
 shape = SubResource( 7 )
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="Meteor" type="RigidBody2D" parent="."]
 position = Vector2( 52, 79 )
 can_sleep = false
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Meteor"]
 shape = SubResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Meteor"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 6 )
