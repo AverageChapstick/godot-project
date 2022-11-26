@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/Node.gd" type="Script" id=1]
 [ext_resource path="res://Art/earth.png" type="Texture" id=2]
@@ -43,6 +43,11 @@ radius = 144.125
 
 [sub_resource type="CircleShape2D" id=9]
 radius = 65.0692
+
+[sub_resource type="Curve2D" id=10]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -64, -64, 0, 0, 0, 0, 1088, -64, 0, 0, 0, 0, 1088, 664, 0, 0, 0, 0, -64, 664, 0, 0, 0, 0, -64, -64 )
+}
 
 [node name="Node" type="Node"]
 script = ExtResource( 1 )
@@ -127,3 +132,16 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MousePosition/MouseGravity"]
 shape = SubResource( 9 )
+
+[node name="MeteorTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="MeteorPath" type="Path2D" parent="."]
+position = Vector2( -16.0556, -16.4176 )
+scale = Vector2( 0.264757, 0.274725 )
+curve = SubResource( 10 )
+
+[node name="MeteorSpawnLocation" type="PathFollow2D" parent="MeteorPath"]
+position = Vector2( -64, -64 )
+
+[connection signal="timeout" from="MeteorTimer" to="." method="_on_MeteorTimer_timeout"]
