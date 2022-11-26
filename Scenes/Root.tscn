@@ -5,7 +5,7 @@
 [ext_resource path="res://Art/new_dynamicfont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Scenes/Mouse.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/EarthGravity.gd" type="Script" id=5]
-[ext_resource path="res://Art/icon.png" type="Texture" id=6]
+[ext_resource path="res://Art/moon.png" type="Texture" id=6]
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.317647, 0.529412, 1 )
@@ -40,6 +40,7 @@ radius = 16.0
 radius = 144.125
 
 [sub_resource type="CircleShape2D" id=8]
+radius = 4.0
 
 [sub_resource type="CircleShape2D" id=9]
 radius = 65.0692
@@ -57,7 +58,7 @@ margin_right = 240.0
 margin_bottom = 136.0
 color = Color( 0.0392157, 0.0980392, 0.160784, 1 )
 
-[node name="Particles2D" type="Particles2D" parent="."]
+[node name="Stars" type="Particles2D" parent="."]
 position = Vector2( 120, 68 )
 amount = 128
 lifetime = 3.0
@@ -118,19 +119,16 @@ __meta__ = {
 shape = SubResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="Meteor"]
-scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 6 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="MousePosition" parent="." instance=ExtResource( 4 )]
 
-[node name="MousePosition" parent="CanvasLayer" instance=ExtResource( 4 )]
-
-[node name="MouseGravity" type="Area2D" parent="CanvasLayer/MousePosition"]
+[node name="MouseGravity" type="Area2D" parent="MousePosition"]
 space_override = 1
 gravity_point = true
 script = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MousePosition/MouseGravity"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MousePosition/MouseGravity"]
 shape = SubResource( 9 )
 
 [node name="MeteorTimer" type="Timer" parent="."]
