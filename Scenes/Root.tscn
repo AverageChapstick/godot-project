@@ -62,11 +62,12 @@ current = true
 environment = SubResource( 4 )
 
 [node name="Label" type="Label" parent="."]
-margin_right = 48.0
+margin_right = 240.0
 margin_bottom = 24.0
 theme = SubResource( 5 )
 custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
 text = "Untitled Gravity Game"
+align = 1
 
 [node name="Earth" type="StaticBody2D" parent="."]
 position = Vector2( 120, 68 )
