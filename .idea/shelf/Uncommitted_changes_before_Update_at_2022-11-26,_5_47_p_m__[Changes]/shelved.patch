@@ -1,0 +1,24 @@
+Index: project.godot
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>; Engine configuration file.\n; It's best edited using the editor UI and not directly,\n; since the parameters that go here are not all obvious.\n;\n; Format:\n;   [section] ; section goes between []\n;   param=value ; assign values to parameters\n\nconfig_version=4\n\n[application]\n\nconfig/name=\"No Name Yet\"\nrun/main_scene=\"res://Scenes/Root.tscn\"\nconfig/icon=\"res://Art/icon.png\"\n\n[display]\n\nwindow/size/width=240\nwindow/size/height=135\nwindow/size/fullscreen=true\nwindow/stretch/mode=\"2d\"\n\n[editor]\n\nversion_control_autoload_on_startup=true\nversion_control_plugin_name=\"GitAPI\"\n\n[gui]\n\ncommon/drop_mouse_on_gui_input_disabled=true\n\n[physics]\n\ncommon/enable_pause_aware_picking=true\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/project.godot b/project.godot
+--- a/project.godot	(revision 6c1a4551f448bdaf5a3c44f78d5b16a1a1cf566e)
++++ b/project.godot	(date 1669453119260)
+@@ -14,13 +14,6 @@
+ run/main_scene="res://Scenes/Root.tscn"
+ config/icon="res://Art/icon.png"
+ 
+-[display]
+-
+-window/size/width=240
+-window/size/height=135
+-window/size/fullscreen=true
+-window/stretch/mode="2d"
+-
+ [editor]
+ 
+ version_control_autoload_on_startup=true

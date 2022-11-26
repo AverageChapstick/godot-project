@@ -5,7 +5,7 @@
 [ext_resource path="res://Art/new_dynamicfont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Scenes/Mouse.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/EarthGravity.gd" type="Script" id=5]
-[ext_resource path="res://Art/icon.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Meteor.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.317647, 0.529412, 1 )
@@ -38,7 +38,10 @@ radius = 16.0
 [sub_resource type="CircleShape2D" id=7]
 radius = 65.0692
 
-[sub_resource type="CircleShape2D" id=8]
+[sub_resource type="Curve2D" id=8]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -64, -64, 0, 0, 0, 0, 1088, -64, 0, 0, 0, 0, 1088, 664, 0, 0, 0, 0, -64, 664, 0, 0, 0, 0, -64, -64 )
+}
 
 [node name="Node" type="Node"]
 script = ExtResource( 1 )
@@ -86,19 +89,7 @@ gravity = 10.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/EarthGravity"]
 shape = SubResource( 7 )
 
-[node name="Meteor" type="RigidBody2D" parent="."]
-position = Vector2( 52, 79 )
-can_sleep = false
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Meteor"]
-shape = SubResource( 8 )
-
-[node name="Sprite" type="Sprite" parent="Meteor"]
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 6 )
+[node name="Meteor" parent="." instance=ExtResource( 6 )]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -111,3 +102,14 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MousePosition/MouseGravity"]
 shape = SubResource( 7 )
+
+[node name="MeteorPath" type="Path2D" parent="."]
+curve = SubResource( 8 )
+
+[node name="MeteorSpawnLocation" type="PathFollow2D" parent="MeteorPath"]
+position = Vector2( -64, -64 )
+
+[node name="MeteorTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="MeteorTimer" to="." method="_on_MeteorTimer_timeout"]

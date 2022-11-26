@@ -1,0 +1,43 @@
+Index: Scenes/Root.tscn
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Scenes/Root.tscn b/Scenes/Root.tscn
+--- a/Scenes/Root.tscn	
++++ b/Scenes/Root.tscn	
+@@ -95,3 +95,7 @@
+ 
+ [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+ shape = SubResource( 8 )
++
++[node name="EarthSprite2" type="Sprite" parent="RigidBody2D"]
++scale = Vector2( 0.622081, 0.622081 )
++texture = ExtResource( 2 )
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -1,9 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="This commit should actually work">
++    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="Mouse">
+       <change beforePath="$PROJECT_DIR$/Scenes/Root.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Root.tscn" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -12,6 +11,7 @@
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
