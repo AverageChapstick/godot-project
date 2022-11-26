@@ -1,0 +1,105 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"72164893-50db-4906-9ff8-953153074448\" name=\"Changes\" comment=\"Canvas layer\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Scenes/Mouse.tscn\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Scenes/Mouse.tscn\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Scenes/Root.tscn\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Scenes/Root.tscn\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Scripts/Node.gd\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Scripts/Node.gd\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n    <option name=\"UPDATE_TYPE\" value=\"REBASE\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2HmzZOQh67Vr5pVu7mJoSdvVj6o\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/kevch/Documents/Andrew/No Name Yet&quot;\n  }\n}</component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"72164893-50db-4906-9ff8-953153074448\" name=\"Changes\" comment=\"\" />\n      <created>1668905101194</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1668905101194</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Screen size n stuff\">\n      <created>1669404156697</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669404156697</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Background\">\n      <created>1669404450290</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669404450290</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Earth\">\n      <created>1669405303459</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669405303460</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Centred\">\n      <created>1669405394590</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669405394590</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"GLOW\">\n      <created>1669405885173</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669405885173</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Font import\">\n      <created>1669406386004</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669406386004</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"Centred again\">\n      <created>1669406513877</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669406513877</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"Mouse\">\n      <created>1669406917713</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669406917713</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"This commit should actually work\">\n      <created>1669481210798</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669481210798</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"Gravity Prototype\">\n      <created>1669483526450</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669483526450</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"Gravity Prototype (Better version)\">\n      <created>1669483637053</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669483637053</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"Gravity Prototype (Even better version)\">\n      <created>1669483759723</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669483759723</updated>\n    </task>\n    <task id=\"LOCAL-00013\" summary=\"Icon.png has joined the battle!\">\n      <created>1669484466875</created>\n      <option name=\"number\" value=\"00013\" />\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669484466875</updated>\n    </task>\n    <task id=\"LOCAL-00014\" summary=\"Canvas layer\">\n      <created>1669484644381</created>\n      <option name=\"number\" value=\"00014\" />\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669484644381</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"15\" />\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Screen size n stuff\" />\n    <MESSAGE value=\"Background\" />\n    <MESSAGE value=\"Earth\" />\n    <MESSAGE value=\"Centred\" />\n    <MESSAGE value=\"GLOW\" />\n    <MESSAGE value=\"Font import\" />\n    <MESSAGE value=\"Centred again\" />\n    <MESSAGE value=\"Mouse\" />\n    <MESSAGE value=\"This commit should actually work\" />\n    <MESSAGE value=\"Gravity Prototype\" />\n    <MESSAGE value=\"Gravity Prototype (Better version)\" />\n    <MESSAGE value=\"Gravity Prototype (Even better version)\" />\n    <MESSAGE value=\"Icon.png has joined the battle!\" />\n    <MESSAGE value=\"Canvas layer\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Canvas layer\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision a5887c68cdaf0cf39ff316b37263ae3133e47c5b)
++++ b/.idea/workspace.xml	(date 1669491017113)
+@@ -1,12 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="Canvas layer">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Scenes/Mouse.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Mouse.tscn" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Scenes/Root.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Root.tscn" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Scripts/Node.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Node.gd" afterDir="false" />
+-    </list>
++    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="meteors slower and spawning more consistently" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -14,7 +9,6 @@
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-    <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -138,7 +132,21 @@
+       <option name="project" value="LOCAL" />
+       <updated>1669484644381</updated>
+     </task>
+-    <option name="localTasksCounter" value="15" />
++    <task id="LOCAL-00015" summary="Meteor spawning">
++      <created>1669490410755</created>
++      <option name="number" value="00015" />
++      <option name="presentableId" value="LOCAL-00015" />
++      <option name="project" value="LOCAL" />
++      <updated>1669490410755</updated>
++    </task>
++    <task id="LOCAL-00016" summary="meteors slower and spawning more consistently">
++      <created>1669490637624</created>
++      <option name="number" value="00016" />
++      <option name="presentableId" value="LOCAL-00016" />
++      <option name="project" value="LOCAL" />
++      <updated>1669490637624</updated>
++    </task>
++    <option name="localTasksCounter" value="17" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -149,8 +157,38 @@
+             <State />
+           </value>
+         </entry>
++        <entry key="edefa8aa-2372-4d6e-86a1-961e389197b6">
++          <value>
++            <State>
++              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
++              <option name="FILTERS">
++                <map>
++                  <entry key="branch">
++                    <value>
++                      <list>
++                        <option value="HEAD" />
++                      </list>
++                    </value>
++                  </entry>
++                  <entry key="structure">
++                    <value>
++                      <list>
++                        <option value="dir:/home/fred/Godot3/GitTest/Art" />
++                      </list>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </State>
++          </value>
++        </entry>
+       </map>
+     </option>
++    <option name="OPEN_GENERIC_TABS">
++      <map>
++        <entry key="edefa8aa-2372-4d6e-86a1-961e389197b6" value="TOOL_WINDOW" />
++      </map>
++    </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Screen size n stuff" />
+@@ -167,6 +205,8 @@
+     <MESSAGE value="Gravity Prototype (Even better version)" />
+     <MESSAGE value="Icon.png has joined the battle!" />
+     <MESSAGE value="Canvas layer" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Canvas layer" />
++    <MESSAGE value="Meteor spawning" />
++    <MESSAGE value="meteors slower and spawning more consistently" />
++    <option name="LAST_COMMIT_MESSAGE" value="meteors slower and spawning more consistently" />
+   </component>
+ </project>
+\ No newline at end of file
