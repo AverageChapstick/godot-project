@@ -86,6 +86,14 @@ shape = SubResource( 6 )
 [node name="EarthSprite" type="Sprite" parent="Earth"]
 texture = ExtResource( 2 )
 
+[node name="EarthGravity" type="Area2D" parent="Earth"]
+space_override = 1
+gravity_point = true
+gravity = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/EarthGravity"]
+shape = SubResource( 7 )
+
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2( 52, 79 )
 can_sleep = false
