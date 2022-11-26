@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="Canvas layer">
-      <change beforePath="$PROJECT_DIR$/Scenes/Mouse.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Mouse.tscn" afterDir="false" />
+    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="Title Centre">
+      <change beforePath="$PROJECT_DIR$/Scenes/EarthGravity.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/EarthGravity.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/Root.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Root.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +136,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669484644381</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Mouse is moon">
+      <created>1669484868581</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669484868581</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Title Centre">
+      <created>1669484979935</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1669484979935</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,6 +179,8 @@
     <MESSAGE value="Gravity Prototype (Even better version)" />
     <MESSAGE value="Icon.png has joined the battle!" />
     <MESSAGE value="Canvas layer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Canvas layer" />
+    <MESSAGE value="Mouse is moon" />
+    <MESSAGE value="Title Centre" />
+    <option name="LAST_COMMIT_MESSAGE" value="Title Centre" />
   </component>
 </project>

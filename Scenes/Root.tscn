@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Node.gd" type="Script" id=1]
 [ext_resource path="res://Art/earth.png" type="Texture" id=2]
@@ -27,6 +27,7 @@ color_ramp = SubResource( 3 )
 [sub_resource type="Environment" id=4]
 background_mode = 4
 glow_enabled = true
+glow_intensity = 3.0
 glow_hdr_threshold = 0.1
 
 [sub_resource type="Theme" id=5]
@@ -36,9 +37,12 @@ default_font = ExtResource( 3 )
 radius = 16.0
 
 [sub_resource type="CircleShape2D" id=7]
-radius = 65.0692
+radius = 144.125
 
 [sub_resource type="CircleShape2D" id=8]
+
+[sub_resource type="CircleShape2D" id=9]
+radius = 65.0692
 
 [node name="Node" type="Node"]
 script = ExtResource( 1 )
@@ -67,6 +71,18 @@ margin_bottom = 24.0
 theme = SubResource( 5 )
 custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
 text = "Untitled Gravity Game"
+align = 1
+
+[node name="Controls" type="Label" parent="."]
+margin_top = 93.0
+margin_right = 240.0
+margin_bottom = 135.0
+theme = SubResource( 5 )
+custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Meteors follow mouse
+Left click to repel
+Right click to increase gravity"
 align = 1
 
 [node name="Earth" type="StaticBody2D" parent="."]
@@ -110,4 +126,4 @@ gravity_point = true
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MousePosition/MouseGravity"]
-shape = SubResource( 7 )
+shape = SubResource( 9 )
