@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="More prototyping">
-      <change beforePath="$PROJECT_DIR$/Scenes/Root.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Root.tscn" afterDir="false" />
+    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="Polishing">
+      <change beforePath="$PROJECT_DIR$/Scenes/Meteor.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Meteor.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Node.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Node.gd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669490978675</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Polishing">
+      <created>1669491502101</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1669491502101</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,6 +202,7 @@
     <MESSAGE value="Mouse is moon" />
     <MESSAGE value="Title Centre" />
     <MESSAGE value="More prototyping" />
-    <option name="LAST_COMMIT_MESSAGE" value="More prototyping" />
+    <MESSAGE value="Polishing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Polishing" />
   </component>
 </project>
