@@ -32,11 +32,11 @@ glow_hdr_threshold = 0.1
 [sub_resource type="Theme" id=5]
 default_font = ExtResource( 3 )
 
-[sub_resource type="CircleShape2D" id=7]
-radius = 65.0692
-
 [sub_resource type="CircleShape2D" id=6]
 radius = 16.0
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 65.0692
 
 [sub_resource type="CircleShape2D" id=8]
 
@@ -68,16 +68,6 @@ theme = SubResource( 5 )
 custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
 text = "Untitled Gravity Game"
 
-[node name="MousePosition" parent="." instance=ExtResource( 4 )]
-
-[node name="MouseGravity" type="Area2D" parent="MousePosition"]
-space_override = 1
-gravity_point = true
-script = ExtResource( 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MousePosition/MouseGravity"]
-shape = SubResource( 7 )
-
 [node name="Earth" type="StaticBody2D" parent="."]
 position = Vector2( 120, 68 )
 
@@ -108,3 +98,15 @@ shape = SubResource( 8 )
 [node name="Sprite" type="Sprite" parent="Meteor"]
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 6 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MousePosition" parent="CanvasLayer" instance=ExtResource( 4 )]
+
+[node name="MouseGravity" type="Area2D" parent="CanvasLayer/MousePosition"]
+space_override = 1
+gravity_point = true
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MousePosition/MouseGravity"]
+shape = SubResource( 7 )
