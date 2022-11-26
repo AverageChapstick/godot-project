@@ -104,6 +104,8 @@ script = ExtResource( 5 )
 shape = SubResource( 7 )
 
 [node name="MeteorPath" type="Path2D" parent="."]
+position = Vector2( -16.2778, -18.8022 )
+scale = Vector2( 0.261285, 0.284341 )
 curve = SubResource( 8 )
 
 [node name="MeteorSpawnLocation" type="PathFollow2D" parent="MeteorPath"]

@@ -1,7 +1,7 @@
 extends Node
 
 var meteor_scene = preload("res://Scenes/Meteor.tscn")
-var meteor_speed = 100
+var meteor_speed = 50
 
 func _process(_delta):
 #Closes the game
