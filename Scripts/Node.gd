@@ -80,4 +80,3 @@ func _on_StartScreen_open_settings():
 
 func _on_StartScreen_open_how_to_play():
 	pass # Replace with function body.
-	

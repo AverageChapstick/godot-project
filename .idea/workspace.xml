@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="very basic title screen">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/Root.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Root.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Node.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Node.gd" afterDir="false" />
-    </list>
+    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="button &quot;pressed&quot; sprites, added quit button" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -192,7 +188,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669542377773</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="very simple game over message, finished game loop">
+      <created>1669543369078</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1669543369078</updated>
+    </task>
+    <task id="LOCAL-00024" summary="button &quot;pressed&quot; sprites, added quit button">
+      <created>1669544752942</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1669544752942</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -227,6 +237,8 @@
     <MESSAGE value="added HUD" />
     <MESSAGE value="meteor destruction fuel, damage &amp; health system" />
     <MESSAGE value="very basic title screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="very basic title screen" />
+    <MESSAGE value="very simple game over message, finished game loop" />
+    <MESSAGE value="button &quot;pressed&quot; sprites, added quit button" />
+    <option name="LAST_COMMIT_MESSAGE" value="button &quot;pressed&quot; sprites, added quit button" />
   </component>
 </project>
