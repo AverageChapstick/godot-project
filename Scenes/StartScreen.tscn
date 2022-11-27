@@ -62,19 +62,6 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="Controls" type="Label" parent="."]
-visible = false
-margin_top = 93.0
-margin_right = 240.0
-margin_bottom = 135.0
-theme = SubResource( 1 )
-custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
-custom_fonts/font = ExtResource( 1 )
-text = "Meteors follow mouse
-Left click to repel
-Right click to increase gravity"
-align = 1
-
 [node name="GridContainer" type="GridContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
