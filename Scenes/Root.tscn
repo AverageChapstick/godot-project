@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Scripts/Node.gd" type="Script" id=1]
 [ext_resource path="res://Art/earth.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=11]
 [ext_resource path="res://Scenes/Screenshake.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Sounds/Repel.wav" type="AudioStream" id=13]
+[ext_resource path="res://Sounds/Space.ogg" type="AudioStream" id=14]
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.317647, 0.529412, 1 )
@@ -184,6 +185,10 @@ align = 1
 valign = 1
 
 [node name="SpawnRateTimer" type="Timer" parent="."]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+autoplay = true
 
 [connection signal="big_screenshake" from="." to="Camera2D" method="_on_Node_big_screenshake"]
 [connection signal="small_screenshake" from="." to="Camera2D" method="_on_Node_small_screenshake"]

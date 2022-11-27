@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="Better Title">
-      <change beforePath="$PROJECT_DIR$/Scripts/EarthGravity.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/EarthGravity.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Meteor.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Meteor.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Node.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Node.gd" afterDir="false" />
+    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="Deleted something useless">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-27__6_32_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-27__6_32_p_m___Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-27__6_41_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-27__6_41_p_m___Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-27__6_47_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-27__6_47_p_m___Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-27__7_29_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-27__7_29_p_m___Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/PullWave.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/PullWave.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/Root.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Root.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/StartScreen.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/StartScreen.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +261,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669572029481</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Bugfix">
+      <created>1669573641113</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1669573641113</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Deleted something useless">
+      <created>1669573928849</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1669573928849</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -270,8 +290,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="GLOW" />
-    <MESSAGE value="Font import" />
     <MESSAGE value="Centred again" />
     <MESSAGE value="Mouse" />
     <MESSAGE value="This commit should actually work" />
@@ -295,6 +313,8 @@
     <MESSAGE value="Explosions" />
     <MESSAGE value="Explosion fix" />
     <MESSAGE value="Better Title" />
-    <option name="LAST_COMMIT_MESSAGE" value="Better Title" />
+    <MESSAGE value="Bugfix" />
+    <MESSAGE value="Deleted something useless" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted something useless" />
   </component>
 </project>
