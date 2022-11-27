@@ -7,7 +7,7 @@ func _on_Meteor_body_entered(body):
 		despawn()
 	elif body.is_in_group("earth"):
 		get_node("/root/Node").earth_hit()
-		queue_free()
+		despawn()
 	else:
 		if randi() % 2:
 			get_node("/root/Node").get_push_fuel()

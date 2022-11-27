@@ -10,12 +10,17 @@ var station_health = 28
 var push_fuel = 28
 var pull_fuel = 28
 
+func _ready():
+	randomize()
+
 func _process(_delta):
-#Closes the game
 	if Input.is_action_pressed("ui_cancel"):
 		get_tree().quit()
 
 func _on_MeteorTimer_timeout():
+	if $MeteorTimer.wait_time > 0.5:
+		$MeteorTimer.wait_time -= 0.05
+		print($MeteorTimer.wait_time)
 	var meteor = meteor_scene.instance()
 	var meteor_spawn_location = get_node("MeteorPath/MeteorSpawnLocation")
 	meteor_spawn_location.offset = randi()
@@ -87,10 +92,15 @@ func _on_StartScreen_start_game():
 	$StartScreen.hide()
 	$Earth.show()
 	$HUD.show()
+	
 	earth_health = 28
 	station_health = 28
 	push_fuel = 28
 	pull_fuel = 28
+	
+	$MeteorTimer.wait_time = 2
+	$SpawnRateTimer.start()
+	
 	$MousePosition.show()
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	$MousePosition/KinematicBody2D.set_collision_layer_bit(0, 1)
@@ -110,3 +120,7 @@ func _on_StartScreen_open_settings():
 
 func _on_StartScreen_open_how_to_play():
 	pass # Replace with function body.
+
+func _on_SpawnRateTimer_timeout():
+	if $MeteorTimer.wait_time > 0.5:
+		$MeteorTimer.wait_time -= 0.005
