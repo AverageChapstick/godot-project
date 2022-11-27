@@ -17,7 +17,7 @@ func _process(_delta):
 	if not $Timer.time_left:
 		if not position.x == clamp(position.x, -10, 250) or not position.y == clamp(position.y, -10, 145):
 			get_node("/root/Node").get_pull_fuel()
-			despawn()
+			queue_free()
 
 func despawn():
 	$Sprite.visible = false
