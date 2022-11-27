@@ -15,7 +15,6 @@ func _process(delta):
 		$Timer.start()
 		waves[ind].texture.fill_to.y = 0.99
 		waves[ind].wave_speed = wave_speed
-		print(ind)
 		ind += 1
 		if ind > 8:
 			ind = 0

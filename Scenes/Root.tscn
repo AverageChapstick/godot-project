@@ -1,15 +1,16 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scripts/Node.gd" type="Script" id=1]
 [ext_resource path="res://Art/earth.png" type="Texture" id=2]
 [ext_resource path="res://Art/new_dynamicfont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Scenes/Mouse.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/EarthGravity.gd" type="Script" id=5]
-[ext_resource path="res://Art/icon.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/StartScreen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/PushWave.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/PullWave.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=11]
+[ext_resource path="res://Scenes/Screenshake.tscn" type="PackedScene" id=12]
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.317647, 0.529412, 1 )
@@ -61,8 +62,10 @@ default_font = ExtResource( 3 )
 script = ExtResource( 1 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 240.0
-margin_bottom = 136.0
+margin_left = -13.0
+margin_top = -15.0
+margin_right = 255.0
+margin_bottom = 152.0
 color = Color( 0.0392157, 0.0980392, 0.160784, 1 )
 
 [node name="Stars" type="Particles2D" parent="."]
@@ -74,6 +77,9 @@ process_material = SubResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 120, 68 )
 current = true
+script = ExtResource( 11 )
+
+[node name="Screenshake" parent="Camera2D" instance=ExtResource( 12 )]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 4 )
@@ -119,6 +125,7 @@ gravity = 10.0
 shape = SubResource( 7 )
 
 [node name="MousePosition" parent="." instance=ExtResource( 4 )]
+visible = false
 
 [node name="MouseGravity" type="Area2D" parent="MousePosition"]
 space_override = 1
@@ -149,9 +156,6 @@ position = Vector2( 1088, 490.39 )
 rotation = 1.5708
 offset = 1695.68
 
-[node name="Sprite" type="Sprite" parent="MeteorPath/MeteorSpawnLocation"]
-texture = ExtResource( 6 )
-
 [node name="HUD" parent="." instance=ExtResource( 7 )]
 visible = false
 
@@ -170,6 +174,8 @@ text = "Game over"
 align = 1
 valign = 1
 
+[connection signal="big_screenshake" from="." to="Camera2D" method="_on_Node_big_screenshake"]
+[connection signal="small_screenshake" from="." to="Camera2D" method="_on_Node_small_screenshake"]
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_MeteorTimer_timeout"]
 [connection signal="open_how_to_play" from="StartScreen" to="." method="_on_StartScreen_open_how_to_play"]
 [connection signal="open_settings" from="StartScreen" to="." method="_on_StartScreen_open_settings"]
