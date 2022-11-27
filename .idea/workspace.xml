@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="Push waves!">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-26__8_30_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-26__8_30_p_m___Changes_.xml" afterDir="false" />
+    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="some fuel and damage balancing">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/PullWave.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/PullWave.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scenes/Root.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Root.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/StartScreen.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/StartScreen.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/EarthGravity.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/EarthGravity.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Mouse.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Mouse.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Node.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Node.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/PullWave.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/PullWave.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/PullWaveSprite.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/PullWaveSprite.gd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,13 +27,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/fred/Godot3/GravityGame&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/fred/Godot3/GravityGame"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -214,7 +218,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669559684330</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Pull waves!">
+      <created>1669562716521</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1669562716521</updated>
+    </task>
+    <task id="LOCAL-00027" summary="some fuel and damage balancing">
+      <created>1669566893215</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1669566893215</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -252,6 +270,8 @@
     <MESSAGE value="very simple game over message, finished game loop" />
     <MESSAGE value="button &quot;pressed&quot; sprites, added quit button" />
     <MESSAGE value="Push waves!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Push waves!" />
+    <MESSAGE value="Pull waves!" />
+    <MESSAGE value="some fuel and damage balancing" />
+    <option name="LAST_COMMIT_MESSAGE" value="some fuel and damage balancing" />
   </component>
 </project>

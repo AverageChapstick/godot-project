@@ -1,5 +1,8 @@
 extends Node
 
+signal big_screenshake
+signal small_screenshake
+
 var meteor_scene = preload("res://Scenes/Meteor.tscn")
 var meteor_speed = 50
 var earth_health = 28
@@ -26,8 +29,10 @@ func earth_hit():
 	if earth_health > 0:
 		earth_health -= randi() % 4 + 1
 		$HUD/EarthHealth/EarthHealthBar.frame = earth_health
+		emit_signal("big_screenshake")
 	if earth_health < 1:
 		$Earth.hide()
+		$Earth/CollisionShape2D.disabled = true
 		$HUD.hide()
 		$GameoverMessage.show()
 		$MeteorTimer.stop()
@@ -35,11 +40,26 @@ func earth_hit():
 		$GameoverMessage.hide()
 		$StartScreen.show()
 		get_tree().call_group("meteors", "queue_free")
+		
+		$MousePosition.hide()
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		$MousePosition/MouseGravity.alive = false
+		$MousePosition/MouseGravity/PullWave.active = false
+		$MousePosition/MouseGravity/PushWave.active = false
 
 func station_hit():
 	if station_health > 0:
 		station_health -= randi() % 4 + 1
-	$HUD/StationHealth/StationHealthBar.frame = station_health
+		emit_signal("small_screenshake")
+		$HUD/StationHealth/StationHealthBar.frame = station_health
+	if station_health < 1:
+		$MousePosition/KinematicBody2D/CollisionShape2D.disabled = true
+		$MousePosition.hide()
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		$MousePosition/MouseGravity.alive = false
+		$MousePosition/MouseGravity.gravity = 0
+		$MousePosition/MouseGravity/PullWave.active = false
+		$MousePosition/MouseGravity/PushWave.active = false
 
 func get_push_fuel():
 	push_fuel += 5
@@ -70,6 +90,11 @@ func _on_StartScreen_start_game():
 	station_health = 28
 	push_fuel = 28
 	pull_fuel = 28
+	$MousePosition.show()
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	$MousePosition/KinematicBody2D/CollisionShape2D.disabled = false
+	$Earth/CollisionShape2D.disabled = false
+	$MousePosition/MouseGravity.alive = true
 	$HUD/EarthHealth/EarthHealthBar.frame = earth_health
 	$HUD/StationHealth/StationHealthBar.frame = station_health
 	$HUD/PushFuel/PushFuelBar.frame = push_fuel
