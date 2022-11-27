@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Art/new_dynamicfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Art/buttons/StartGameIdle.png" type="Texture" id=2]
@@ -13,9 +13,19 @@
 [ext_resource path="res://Art/buttons/HowToPlayPressed.png" type="Texture" id=11]
 [ext_resource path="res://Art/buttons/StartGamePressed.png" type="Texture" id=12]
 [ext_resource path="res://Art/buttons/SettingsPressed.png" type="Texture" id=13]
+[ext_resource path="res://Art/PixelEmulator-xq08.ttf" type="DynamicFontData" id=14]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 5
+outline_color = Color( 0, 1, 0.603922, 1 )
+use_filter = true
+font_data = ExtResource( 14 )
 
 [node name="StartScreen" type="Control"]
 anchor_right = 1.0
@@ -34,6 +44,20 @@ custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
 text = "Untitled Gravity Game"
 align = 1
 valign = 1
+
+[node name="Credits" type="Label" parent="."]
+margin_left = -23.0
+margin_top = 122.0
+margin_right = 129.0
+margin_bottom = 135.0
+rect_scale = Vector2( 1.38587, 1.38587 )
+theme = SubResource( 2 )
+custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "By AverageChapstick and Hexopus"
+align = 1
+valign = 1
+autowrap = true
 
 [node name="Controls" type="Label" parent="."]
 visible = false
