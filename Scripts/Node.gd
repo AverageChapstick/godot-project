@@ -11,6 +11,7 @@ var push_fuel = 28
 var pull_fuel = 28
 
 func _ready():
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), -10)
 	randomize()
 
 func _process(_delta):
