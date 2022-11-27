@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="Credits">
-      <change beforePath="$PROJECT_DIR$/Scenes/Root.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Root.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/StartScreen.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/StartScreen.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/StartScreen.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/StartScreen.gd" afterDir="false" />
+    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="Menu Sounds">
+      <change beforePath="$PROJECT_DIR$/Scenes/Meteor.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Meteor.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Meteor.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Meteor.gd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669566893215</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Menu Sounds">
+      <created>1669570231791</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1669570231791</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,7 +248,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Screen size n stuff" />
     <MESSAGE value="Background" />
     <MESSAGE value="Earth" />
     <MESSAGE value="Centred" />
@@ -267,6 +272,7 @@
     <MESSAGE value="Push waves!" />
     <MESSAGE value="Pull waves!" />
     <MESSAGE value="some fuel and damage balancing" />
-    <option name="LAST_COMMIT_MESSAGE" value="some fuel and damage balancing" />
+    <MESSAGE value="Menu Sounds" />
+    <option name="LAST_COMMIT_MESSAGE" value="Menu Sounds" />
   </component>
 </project>
