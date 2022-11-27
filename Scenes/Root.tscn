@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/Node.gd" type="Script" id=1]
 [ext_resource path="res://Art/earth.png" type="Texture" id=2]
@@ -51,6 +51,9 @@ radius = 4.47214
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -64, -64, 0, 0, 0, 0, 1088, -64, 0, 0, 0, 0, 1088, 664, 0, 0, 0, 0, -64, 664, 0, 0, 0, 0, -64, -64 )
 }
+
+[sub_resource type="Theme" id=12]
+default_font = ExtResource( 3 )
 
 [node name="Node" type="Node"]
 script = ExtResource( 1 )
@@ -147,6 +150,19 @@ texture = ExtResource( 6 )
 visible = false
 
 [node name="StartScreen" parent="." instance=ExtResource( 8 )]
+
+[node name="GameoverMessage" type="Label" parent="."]
+visible = false
+margin_left = -3.0
+margin_top = -14.0
+margin_right = 85.0
+margin_bottom = 13.0
+rect_scale = Vector2( 2.81563, 2.81563 )
+theme = SubResource( 12 )
+custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
+text = "Game over"
+align = 1
+valign = 1
 
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_MeteorTimer_timeout"]
 [connection signal="open_how_to_play" from="StartScreen" to="." method="_on_StartScreen_open_how_to_play"]

@@ -27,7 +27,14 @@ func earth_hit():
 		earth_health -= 1
 		$HUD/EarthHealth/EarthHealthBar.frame = earth_health
 	if earth_health < 1:
-		$Earth.visible = false
+		$Earth.hide()
+		$HUD.hide()
+		$GameoverMessage.show()
+		$MeteorTimer.stop()
+		yield(get_tree().create_timer(3.0), "timeout")
+		$GameoverMessage.hide()
+		$StartScreen.show()
+		get_tree().call_group("meteors", "queue_free")
 
 func station_hit():
 	if station_health > 0:
@@ -57,6 +64,14 @@ func _on_StartScreen_start_game():
 	$StartScreen.hide()
 	$Earth.show()
 	$HUD.show()
+	earth_health = 28
+	station_health = 28
+	push_fuel = 28
+	pull_fuel = 28
+	$HUD/EarthHealth/EarthHealthBar.frame = earth_health
+	$HUD/StationHealth/StationHealthBar.frame = station_health
+	$HUD/PushFuel/PushFuelBar.frame = push_fuel
+	$HUD/PullFuel/PullFuelBar.frame = pull_fuel
 	$MeteorTimer.start()
 	_on_MeteorTimer_timeout()
 	
