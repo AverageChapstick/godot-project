@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Art/new_dynamicfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Art/buttons/StartGameIdle.png" type="Texture" id=2]
@@ -14,6 +14,8 @@
 [ext_resource path="res://Art/buttons/StartGamePressed.png" type="Texture" id=12]
 [ext_resource path="res://Art/buttons/SettingsPressed.png" type="Texture" id=13]
 [ext_resource path="res://Art/PixelEmulator-xq08.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://Sounds/Hover.wav" type="AudioStream" id=15]
+[ext_resource path="res://Sounds/Start.wav" type="AudioStream" id=16]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 1 )
@@ -137,7 +139,17 @@ rect_scale = Vector2( 2.1007, 2.1007 )
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 10 )
 
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -5.0
+
+[node name="Start" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+
+[connection signal="mouse_entered" from="GridContainer/StartGame" to="." method="_on_StartGame_mouse_entered"]
 [connection signal="pressed" from="GridContainer/StartGame" to="." method="_on_StartGame_pressed"]
+[connection signal="mouse_entered" from="GridContainer/Settings" to="." method="_on_Settings_mouse_entered"]
 [connection signal="pressed" from="GridContainer/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="mouse_entered" from="GridContainer/HowToPlay" to="." method="_on_HowToPlay_mouse_entered"]
 [connection signal="pressed" from="GridContainer/HowToPlay" to="." method="_on_HowToPlay_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
