@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="button &quot;pressed&quot; sprites, added quit button" />
+    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="Push waves!">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/PushWave.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/PushWave.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/Root.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Root.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/EarthGravity.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/EarthGravity.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/PushWave.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/PushWave.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/WaveSprite.gd" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -202,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669544752942</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Push waves!">
+      <created>1669559684330</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1669559684330</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,6 +253,7 @@
     <MESSAGE value="very basic title screen" />
     <MESSAGE value="very simple game over message, finished game loop" />
     <MESSAGE value="button &quot;pressed&quot; sprites, added quit button" />
-    <option name="LAST_COMMIT_MESSAGE" value="button &quot;pressed&quot; sprites, added quit button" />
+    <MESSAGE value="Push waves!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Push waves!" />
   </component>
 </project>

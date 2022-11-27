@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scripts/Node.gd" type="Script" id=1]
 [ext_resource path="res://Art/earth.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/StartScreen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/PushWave.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/PullWave.tscn" type="PackedScene" id=10]
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.317647, 0.529412, 1 )
@@ -125,6 +126,8 @@ gravity_point = true
 script = ExtResource( 5 )
 
 [node name="PushWave" parent="MousePosition/MouseGravity" instance=ExtResource( 9 )]
+
+[node name="PullWave" parent="MousePosition/MouseGravity" instance=ExtResource( 10 )]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MousePosition/MouseGravity"]
 shape = SubResource( 9 )
