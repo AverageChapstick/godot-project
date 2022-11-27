@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="Menu Sounds">
-      <change beforePath="$PROJECT_DIR$/Scenes/Meteor.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Meteor.tscn" afterDir="false" />
+    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="Explosions">
       <change beforePath="$PROJECT_DIR$/Scripts/Meteor.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Meteor.gd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -233,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669570231791</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Explosions">
+      <created>1669570766919</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1669570766919</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,7 +254,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Background" />
     <MESSAGE value="Earth" />
     <MESSAGE value="Centred" />
     <MESSAGE value="GLOW" />
@@ -273,6 +278,7 @@
     <MESSAGE value="Pull waves!" />
     <MESSAGE value="some fuel and damage balancing" />
     <MESSAGE value="Menu Sounds" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menu Sounds" />
+    <MESSAGE value="Explosions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Explosions" />
   </component>
 </project>

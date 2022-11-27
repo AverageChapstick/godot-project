@@ -20,6 +20,7 @@ func _process(_delta):
 			despawn()
 
 func despawn():
+	$Sprite.visible = false
 	$Particles2D.emitting = true
 	$Explosion.playing = true
 	yield(get_tree().create_timer(1.0), "timeout")
