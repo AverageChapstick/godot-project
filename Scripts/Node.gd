@@ -18,13 +18,13 @@ func _on_MeteorTimer_timeout():
 	var meteor_spawn_location = get_node("MeteorPath/MeteorSpawnLocation")
 	meteor_spawn_location.offset = randi()
 	meteor.position = meteor_spawn_location.global_position
-	meteor.linear_velocity = meteor_speed * meteor.position.direction_to($Earth.position)
+	meteor.linear_velocity = rand_range(meteor_speed / 5, meteor_speed) * meteor.position.direction_to($Earth.position)
 	add_child(meteor)
 	meteor.add_to_group("meteors")
 
 func earth_hit():
 	if earth_health > 0:
-		earth_health -= 1
+		earth_health -= randi() % 4 + 1
 		$HUD/EarthHealth/EarthHealthBar.frame = earth_health
 	if earth_health < 1:
 		$Earth.hide()
@@ -38,24 +38,26 @@ func earth_hit():
 
 func station_hit():
 	if station_health > 0:
-		station_health -= 1
+		station_health -= randi() % 4 + 1
 	$HUD/StationHealth/StationHealthBar.frame = station_health
 
 func get_push_fuel():
-	push_fuel += 1
+	push_fuel += 5
 	$HUD/PushFuel/PushFuelBar.frame = push_fuel
 
 func get_pull_fuel():
-	pull_fuel += 1
+	pull_fuel += randi() % 5
 	$HUD/PullFuel/PullFuelBar.frame = pull_fuel
 
 func use_push_fuel():
-	push_fuel -= 1
-	$HUD/PushFuel/PushFuelBar.frame = push_fuel
+	if not randi() % 3:
+		push_fuel -= 1
+		$HUD/PushFuel/PushFuelBar.frame = push_fuel
 
 func use_pull_fuel():
-	pull_fuel -= 1
-	$HUD/PullFuel/PullFuelBar.frame = pull_fuel
+	if not randi() % 3:
+		pull_fuel -= 1
+		$HUD/PullFuel/PullFuelBar.frame = pull_fuel
 
 func _on_EarthGravity_body_entered(body):
 	body.queue_free()
