@@ -20,8 +20,12 @@ func _process(_delta):
 			queue_free()
 
 func despawn():
+	linear_damp = 2
+	angular_damp = 10
 	$Sprite.visible = false
 	$Particles2D.emitting = true
 	$Explosion.playing = true
-	yield(get_tree().create_timer(1.0), "timeout")
+	set_collision_layer_bit(0, 0)
+	set_collision_mask_bit(0, 0)
+	yield(get_tree().create_timer(3.0), "timeout")
 	queue_free()

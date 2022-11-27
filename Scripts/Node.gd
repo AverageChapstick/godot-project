@@ -15,7 +15,6 @@ func _process(_delta):
 	if Input.is_action_pressed("ui_cancel"):
 		get_tree().quit()
 
-
 func _on_MeteorTimer_timeout():
 	var meteor = meteor_scene.instance()
 	var meteor_spawn_location = get_node("MeteorPath/MeteorSpawnLocation")
