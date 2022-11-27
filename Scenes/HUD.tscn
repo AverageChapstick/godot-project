@@ -139,12 +139,11 @@ animation = "blue"
 frame = 28
 centered = false
 
-[node name="PushIcon" type="TextureRect" parent="PullFuel"]
+[node name="PullIcon" type="TextureRect" parent="PullFuel"]
 margin_left = 69.0
-margin_top = -209.0
 margin_right = 85.0
-margin_bottom = -193.0
-texture = ExtResource( 3 )
+margin_bottom = 16.0
+texture = ExtResource( 1 )
 stretch_mode = 1
 
 [node name="PushFuel" type="TextureRect" parent="."]
@@ -168,12 +167,12 @@ animation = "green"
 frame = 28
 centered = false
 
-[node name="PullIcon" type="TextureRect" parent="PushFuel"]
+[node name="PushIcon" type="TextureRect" parent="PushFuel"]
 margin_left = 69.0
-margin_top = 209.0
+margin_top = -1.52588e-05
 margin_right = 85.0
-margin_bottom = 225.0
-texture = ExtResource( 1 )
+margin_bottom = 16.0
+texture = ExtResource( 3 )
 stretch_mode = 1
 
 [node name="EarthHealth" type="TextureRect" parent="."]

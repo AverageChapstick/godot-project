@@ -5,7 +5,7 @@
 [ext_resource path="res://Art/new_dynamicfont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Scenes/Mouse.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/EarthGravity.gd" type="Script" id=5]
-[ext_resource path="res://Art/moon.png" type="Texture" id=6]
+[ext_resource path="res://Art/icon.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Gradient" id=2]
@@ -40,11 +40,11 @@ radius = 16.0
 [sub_resource type="CircleShape2D" id=7]
 radius = 144.125
 
-[sub_resource type="CircleShape2D" id=8]
-radius = 4.0
-
 [sub_resource type="CircleShape2D" id=9]
 radius = 65.0692
+
+[sub_resource type="CircleShape2D" id=11]
+radius = 4.47214
 
 [sub_resource type="Curve2D" id=10]
 _data = {
@@ -94,7 +94,7 @@ Left click to repel
 Right click to increase gravity"
 align = 1
 
-[node name="Earth" type="StaticBody2D" parent="."]
+[node name="Earth" type="StaticBody2D" parent="." groups=["earth"]]
 position = Vector2( 120, 68 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Earth"]
@@ -111,19 +111,6 @@ gravity = 10.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/EarthGravity"]
 shape = SubResource( 7 )
 
-[node name="Meteor" type="RigidBody2D" parent="."]
-position = Vector2( 52, 79 )
-can_sleep = false
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Meteor"]
-shape = SubResource( 8 )
-
-[node name="Sprite" type="Sprite" parent="Meteor"]
-texture = ExtResource( 6 )
-
 [node name="MousePosition" parent="." instance=ExtResource( 4 )]
 
 [node name="MouseGravity" type="Area2D" parent="MousePosition"]
@@ -134,16 +121,26 @@ script = ExtResource( 5 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MousePosition/MouseGravity"]
 shape = SubResource( 9 )
 
+[node name="KinematicBody2D" type="KinematicBody2D" parent="MousePosition" groups=["station"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MousePosition/KinematicBody2D"]
+shape = SubResource( 11 )
+
 [node name="MeteorTimer" type="Timer" parent="."]
 autostart = true
 
 [node name="MeteorPath" type="Path2D" parent="."]
-position = Vector2( 23.8889, 21.7582 )
-scale = Vector2( 0.185764, 0.152473 )
+position = Vector2( 0.999992, -1 )
+scale = Vector2( 0.232525, 0.22757 )
 curve = SubResource( 10 )
 
 [node name="MeteorSpawnLocation" type="PathFollow2D" parent="MeteorPath"]
-position = Vector2( -64, -64 )
+position = Vector2( 1088, 490.39 )
+rotation = 1.5708
+offset = 1695.68
+
+[node name="Sprite" type="Sprite" parent="MeteorPath/MeteorSpawnLocation"]
+texture = ExtResource( 6 )
 
 [node name="HUD" parent="." instance=ExtResource( 7 )]
 
