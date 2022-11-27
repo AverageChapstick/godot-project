@@ -1,16 +1,18 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scripts/Node.gd" type="Script" id=1]
 [ext_resource path="res://Art/earth.png" type="Texture" id=2]
 [ext_resource path="res://Art/new_dynamicfont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Scenes/Mouse.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/EarthGravity.gd" type="Script" id=5]
+[ext_resource path="res://Sounds/Attract.wav" type="AudioStream" id=6]
 [ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/StartScreen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/PushWave.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/PullWave.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=11]
 [ext_resource path="res://Scenes/Screenshake.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Sounds/Repel.wav" type="AudioStream" id=13]
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.317647, 0.529412, 1 )
@@ -139,6 +141,12 @@ script = ExtResource( 5 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MousePosition/MouseGravity"]
 shape = SubResource( 9 )
 
+[node name="PushSound" type="AudioStreamPlayer" parent="MousePosition/MouseGravity"]
+stream = ExtResource( 13 )
+
+[node name="PullSound" type="AudioStreamPlayer" parent="MousePosition/MouseGravity"]
+stream = ExtResource( 6 )
+
 [node name="KinematicBody2D" type="KinematicBody2D" parent="MousePosition" groups=["station"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MousePosition/KinematicBody2D"]
@@ -175,9 +183,12 @@ text = "Game over"
 align = 1
 valign = 1
 
+[node name="SpawnRateTimer" type="Timer" parent="."]
+
 [connection signal="big_screenshake" from="." to="Camera2D" method="_on_Node_big_screenshake"]
 [connection signal="small_screenshake" from="." to="Camera2D" method="_on_Node_small_screenshake"]
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_MeteorTimer_timeout"]
 [connection signal="open_how_to_play" from="StartScreen" to="." method="_on_StartScreen_open_how_to_play"]
 [connection signal="open_settings" from="StartScreen" to="." method="_on_StartScreen_open_settings"]
 [connection signal="start_game" from="StartScreen" to="." method="_on_StartScreen_start_game"]
+[connection signal="timeout" from="SpawnRateTimer" to="." method="_on_SpawnRateTimer_timeout"]

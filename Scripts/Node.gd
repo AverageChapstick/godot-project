@@ -20,7 +20,6 @@ func _process(_delta):
 func _on_MeteorTimer_timeout():
 	if $MeteorTimer.wait_time > 0.5:
 		$MeteorTimer.wait_time -= 0.05
-		print($MeteorTimer.wait_time)
 	var meteor = meteor_scene.instance()
 	var meteor_spawn_location = get_node("MeteorPath/MeteorSpawnLocation")
 	meteor_spawn_location.offset = randi()

@@ -49,10 +49,10 @@ align = 1
 valign = 1
 
 [node name="Credits" type="Label" parent="."]
-margin_left = -23.0
-margin_top = 122.0
-margin_right = 129.0
-margin_bottom = 135.0
+margin_left = -31.0
+margin_top = 119.0
+margin_right = 121.0
+margin_bottom = 132.0
 rect_scale = Vector2( 1.38587, 1.38587 )
 theme = SubResource( 2 )
 custom_colors/font_color = Color( 0, 1, 0.603922, 1 )

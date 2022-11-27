@@ -1,0 +1,55 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -1,10 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="Credits">
+-      <change beforePath="$PROJECT_DIR$/Scenes/Root.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Root.tscn" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Scenes/StartScreen.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/StartScreen.tscn" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Scripts/StartScreen.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/StartScreen.gd" afterDir="false" />
++    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="screen shake, minor bug fixes">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -227,7 +225,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1669566893215</updated>
+     </task>
+-    <option name="localTasksCounter" value="28" />
++    <task id="LOCAL-00028" summary="screen shake, minor bug fixes">
++      <created>1669569627029</created>
++      <option name="number" value="00028" />
++      <option name="presentableId" value="LOCAL-00028" />
++      <option name="project" value="LOCAL" />
++      <updated>1669569627029</updated>
++    </task>
++    <option name="localTasksCounter" value="29" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -242,7 +247,6 @@
+     </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+-    <MESSAGE value="Screen size n stuff" />
+     <MESSAGE value="Background" />
+     <MESSAGE value="Earth" />
+     <MESSAGE value="Centred" />
+@@ -267,6 +271,7 @@
+     <MESSAGE value="Push waves!" />
+     <MESSAGE value="Pull waves!" />
+     <MESSAGE value="some fuel and damage balancing" />
+-    <option name="LAST_COMMIT_MESSAGE" value="some fuel and damage balancing" />
++    <MESSAGE value="screen shake, minor bug fixes" />
++    <option name="LAST_COMMIT_MESSAGE" value="screen shake, minor bug fixes" />
+   </component>
+ </project>
+\ No newline at end of file

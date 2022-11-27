@@ -1,0 +1,17 @@
+Index: Scripts/Meteor.gd
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>extends RigidBody2D\n\nfunc _on_Meteor_body_entered(body):\n\tif body.is_in_group(\"station\"):\n\t\temit_signal(\"station_hit\")\n\t\tget_node(\"/root/Node\").station_hit()\n\t\tdespawn()\n\telif body.is_in_group(\"earth\"):\n\t\tget_node(\"/root/Node\").earth_hit()\n\t\tqueue_free()\n\telse:\n\t\tif randi() % 2:\n\t\t\tget_node(\"/root/Node\").get_push_fuel()\n\t\t\tdespawn()\n\nfunc _process(_delta):\n\tif not $Timer.time_left:\n\t\tif not position.x == clamp(position.x, -10, 250) or not position.y == clamp(position.y, -10, 145):\n\t\t\tget_node(\"/root/Node\").get_pull_fuel()\n\t\t\tdespawn()\n\nfunc despawn():\n\t$Sprite.visible = false\n\t$Particles2D.emitting = true\n\t$Explosion.playing = true\n\tyield(get_tree().create_timer(1.0), \"timeout\")\n\tqueue_free()\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Scripts/Meteor.gd b/Scripts/Meteor.gd
+--- a/Scripts/Meteor.gd	(revision ea7acfb2dace4d5b8fab58dcf06d6967108de3d8)
++++ b/Scripts/Meteor.gd	(date 1669571335669)
+@@ -23,5 +23,5 @@
+ 	$Sprite.visible = false
+ 	$Particles2D.emitting = true
+ 	$Explosion.playing = true
+-	yield(get_tree().create_timer(1.0), "timeout")
++	yield(get_tree().create_timer(3.0), "timeout")
+ 	queue_free()
