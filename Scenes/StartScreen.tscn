@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Art/new_dynamicfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Art/buttons/StartGameIdle.png" type="Texture" id=2]
@@ -8,6 +8,11 @@
 [ext_resource path="res://Art/buttons/StartGameHover.png" type="Texture" id=6]
 [ext_resource path="res://Art/buttons/HowToPlayHover.png" type="Texture" id=7]
 [ext_resource path="res://Art/buttons/SettingsHover.png" type="Texture" id=8]
+[ext_resource path="res://Art/buttons/QuitIdle.png" type="Texture" id=9]
+[ext_resource path="res://Art/buttons/QuitPressed.png" type="Texture" id=10]
+[ext_resource path="res://Art/buttons/HowToPlayPressed.png" type="Texture" id=11]
+[ext_resource path="res://Art/buttons/StartGamePressed.png" type="Texture" id=12]
+[ext_resource path="res://Art/buttons/SettingsPressed.png" type="Texture" id=13]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 1 )
@@ -49,9 +54,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -94.0
-margin_top = -39.5
+margin_top = -34.5
 margin_right = 94.0
-margin_bottom = 58.5
+margin_bottom = 63.5
 rect_scale = Vector2( 0.715748, 0.715748 )
 rect_pivot_offset = Vector2( 94, 49 )
 
@@ -62,6 +67,7 @@ rect_min_size = Vector2( 1, 30 )
 size_flags_vertical = 3
 theme = SubResource( 1 )
 texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 12 )
 texture_hover = ExtResource( 6 )
 expand = true
 stretch_mode = 5
@@ -75,6 +81,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource( 1 )
 texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 13 )
 texture_hover = ExtResource( 8 )
 expand = true
 stretch_mode = 5
@@ -88,10 +95,25 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource( 1 )
 texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 11 )
 texture_hover = ExtResource( 7 )
 expand = true
 stretch_mode = 5
 
+[node name="QuitButton" type="TextureButton" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -23.0
+margin_top = -23.0
+margin_right = -14.0
+margin_bottom = -14.0
+rect_scale = Vector2( 2.1007, 2.1007 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+
 [connection signal="pressed" from="GridContainer/StartGame" to="." method="_on_StartGame_pressed"]
 [connection signal="pressed" from="GridContainer/Settings" to="." method="_on_Settings_pressed"]
 [connection signal="pressed" from="GridContainer/HowToPlay" to="." method="_on_HowToPlay_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]

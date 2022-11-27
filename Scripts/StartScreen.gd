@@ -12,3 +12,6 @@ func _on_Settings_pressed():
 
 func _on_HowToPlay_pressed():
 	emit_signal("open_how_to_play")
+
+func _on_QuitButton_pressed():
+	get_tree().quit()
