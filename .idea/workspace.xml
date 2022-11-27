@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="added HUD">
-      <change beforePath="$PROJECT_DIR$/Scenes/EarthGravity.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/EarthGravity.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/HUD.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/HUD.tscn" afterDir="false" />
+    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="meteor destruction fuel, damage &amp; health system">
+      <change beforePath="$PROJECT_DIR$/Mouse.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/EarthGravity.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/Meteor.gd" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Scenes/Meteor.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Meteor.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/Mouse.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Mouse.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scenes/Root.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Root.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Node.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Node.gd" afterDir="false" />
     </list>
@@ -180,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669501971805</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="meteor destruction fuel, damage &amp; health system">
+      <created>1669508249097</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1669508249097</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,6 +222,7 @@
     <MESSAGE value="Title Centre" />
     <MESSAGE value="More prototyping" />
     <MESSAGE value="added HUD" />
-    <option name="LAST_COMMIT_MESSAGE" value="added HUD" />
+    <MESSAGE value="meteor destruction fuel, damage &amp; health system" />
+    <option name="LAST_COMMIT_MESSAGE" value="meteor destruction fuel, damage &amp; health system" />
   </component>
 </project>

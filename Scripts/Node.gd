@@ -7,11 +7,6 @@ var station_health = 28
 var push_fuel = 28
 var pull_fuel = 28
 
-func _ready():
-	_on_MeteorTimer_timeout()
-#	connect("earth_hit", self, "earth_hit")
-#	connect("station_hit", self, "station_hit")
-
 func _process(_delta):
 #Closes the game
 	if Input.is_action_pressed("ui_cancel"):
@@ -57,3 +52,17 @@ func use_pull_fuel():
 
 func _on_EarthGravity_body_entered(body):
 	body.queue_free()
+
+func _on_StartScreen_start_game():
+	$StartScreen.hide()
+	$Earth.show()
+	$HUD.show()
+	$MeteorTimer.start()
+	_on_MeteorTimer_timeout()
+	
+func _on_StartScreen_open_settings():
+	pass # Replace with function body.
+
+func _on_StartScreen_open_how_to_play():
+	pass # Replace with function body.
+	

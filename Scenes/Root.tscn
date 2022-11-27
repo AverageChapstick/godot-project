@@ -1,12 +1,13 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scripts/Node.gd" type="Script" id=1]
 [ext_resource path="res://Art/earth.png" type="Texture" id=2]
 [ext_resource path="res://Art/new_dynamicfont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Scenes/Mouse.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/EarthGravity.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/EarthGravity.gd" type="Script" id=5]
 [ext_resource path="res://Art/icon.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/StartScreen.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.317647, 0.529412, 1 )
@@ -95,6 +96,7 @@ Right click to increase gravity"
 align = 1
 
 [node name="Earth" type="StaticBody2D" parent="." groups=["earth"]]
+visible = false
 position = Vector2( 120, 68 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Earth"]
@@ -127,7 +129,6 @@ shape = SubResource( 9 )
 shape = SubResource( 11 )
 
 [node name="MeteorTimer" type="Timer" parent="."]
-autostart = true
 
 [node name="MeteorPath" type="Path2D" parent="."]
 position = Vector2( 0.999992, -1 )
@@ -143,5 +144,11 @@ offset = 1695.68
 texture = ExtResource( 6 )
 
 [node name="HUD" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[node name="StartScreen" parent="." instance=ExtResource( 8 )]
 
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_MeteorTimer_timeout"]
+[connection signal="open_how_to_play" from="StartScreen" to="." method="_on_StartScreen_open_how_to_play"]
+[connection signal="open_settings" from="StartScreen" to="." method="_on_StartScreen_open_settings"]
+[connection signal="start_game" from="StartScreen" to="." method="_on_StartScreen_start_game"]

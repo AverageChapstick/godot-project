@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Art/new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Art/buttons/StartGameIdle.png" type="Texture" id=2]
+[ext_resource path="res://Art/buttons/SettingsIdle.png" type="Texture" id=3]
+[ext_resource path="res://Art/buttons/HowToPlay.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/StartScreen.gd" type="Script" id=5]
+[ext_resource path="res://Art/buttons/StartGameHover.png" type="Texture" id=6]
+[ext_resource path="res://Art/buttons/HowToPlayHover.png" type="Texture" id=7]
+[ext_resource path="res://Art/buttons/SettingsHover.png" type="Texture" id=8]
+
+[sub_resource type="Theme" id=1]
+default_font = ExtResource( 1 )
+
+[node name="StartScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -80, 28 )
+script = ExtResource( 5 )
+
+[node name="Title" type="Label" parent="."]
+margin_left = -43.0
+margin_top = 10.0
+margin_right = 197.0
+margin_bottom = 34.0
+rect_scale = Vector2( 1.38587, 1.38587 )
+theme = SubResource( 1 )
+custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
+text = "Untitled Gravity Game"
+align = 1
+valign = 1
+
+[node name="Controls" type="Label" parent="."]
+visible = false
+margin_top = 93.0
+margin_right = 240.0
+margin_bottom = 135.0
+theme = SubResource( 1 )
+custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Meteors follow mouse
+Left click to repel
+Right click to increase gravity"
+align = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -94.0
+margin_top = -39.5
+margin_right = 94.0
+margin_bottom = 58.5
+rect_scale = Vector2( 0.715748, 0.715748 )
+rect_pivot_offset = Vector2( 94, 49 )
+
+[node name="StartGame" type="TextureButton" parent="GridContainer"]
+margin_right = 188.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 1, 30 )
+size_flags_vertical = 3
+theme = SubResource( 1 )
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+
+[node name="Settings" type="TextureButton" parent="GridContainer"]
+margin_top = 34.0
+margin_right = 188.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource( 1 )
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 8 )
+expand = true
+stretch_mode = 5
+
+[node name="HowToPlay" type="TextureButton" parent="GridContainer"]
+margin_top = 68.0
+margin_right = 188.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource( 1 )
+texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[connection signal="pressed" from="GridContainer/StartGame" to="." method="_on_StartGame_pressed"]
+[connection signal="pressed" from="GridContainer/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="GridContainer/HowToPlay" to="." method="_on_HowToPlay_pressed"]
