@@ -43,6 +43,7 @@ margin_bottom = 34.0
 rect_scale = Vector2( 1.38587, 1.38587 )
 theme = SubResource( 1 )
 custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
+custom_colors/font_color_shadow = Color( 0, 0.466667, 1, 1 )
 text = "Untitled Gravity Game"
 align = 1
 valign = 1

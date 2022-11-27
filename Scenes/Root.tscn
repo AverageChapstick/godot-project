@@ -145,6 +145,7 @@ shape = SubResource( 9 )
 shape = SubResource( 11 )
 
 [node name="MeteorTimer" type="Timer" parent="."]
+wait_time = 3.0
 
 [node name="MeteorPath" type="Path2D" parent="."]
 position = Vector2( 0.999992, -1 )
