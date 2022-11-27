@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="screen shake, minor bug fixes" />
+    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="Credits">
+      <change beforePath="$PROJECT_DIR$/Scenes/Root.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Root.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/StartScreen.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/StartScreen.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/StartScreen.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/StartScreen.gd" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,13 +22,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/fred/Godot3/GravityGame"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/fred/Godot3/GravityGame&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -223,14 +227,7 @@
       <option name="project" value="LOCAL" />
       <updated>1669566893215</updated>
     </task>
-    <task id="LOCAL-00028" summary="screen shake, minor bug fixes">
-      <created>1669569627029</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1669569627029</updated>
-    </task>
-    <option name="localTasksCounter" value="29" />
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -245,6 +242,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Screen size n stuff" />
     <MESSAGE value="Background" />
     <MESSAGE value="Earth" />
     <MESSAGE value="Centred" />
@@ -269,7 +267,6 @@
     <MESSAGE value="Push waves!" />
     <MESSAGE value="Pull waves!" />
     <MESSAGE value="some fuel and damage balancing" />
-    <MESSAGE value="screen shake, minor bug fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="screen shake, minor bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="some fuel and damage balancing" />
   </component>
 </project>
