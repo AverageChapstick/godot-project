@@ -32,7 +32,8 @@ func earth_hit():
 		emit_signal("big_screenshake")
 	if earth_health < 1:
 		$Earth.hide()
-		$Earth/CollisionShape2D.disabled = true
+		$Earth.set_collision_layer_bit(0, 0)
+		$Earth.set_collision_mask_bit(0, 0)
 		$HUD.hide()
 		$GameoverMessage.show()
 		$MeteorTimer.stop()
@@ -53,7 +54,8 @@ func station_hit():
 		emit_signal("small_screenshake")
 		$HUD/StationHealth/StationHealthBar.frame = station_health
 	if station_health < 1:
-		$MousePosition/KinematicBody2D/CollisionShape2D.disabled = true
+		$MousePosition/KinematicBody2D.set_collision_layer_bit(0, 0)
+		$MousePosition/KinematicBody2D.set_collision_mask_bit(0, 0)
 		$MousePosition.hide()
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		$MousePosition/MouseGravity.alive = false
@@ -92,8 +94,10 @@ func _on_StartScreen_start_game():
 	pull_fuel = 28
 	$MousePosition.show()
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	$MousePosition/KinematicBody2D/CollisionShape2D.disabled = false
-	$Earth/CollisionShape2D.disabled = false
+	$MousePosition/KinematicBody2D.set_collision_layer_bit(0, 1)
+	$MousePosition/KinematicBody2D.set_collision_mask_bit(0, 1)
+	$Earth.set_collision_layer_bit(0, 1)
+	$Earth.set_collision_mask_bit(0, 1)
 	$MousePosition/MouseGravity.alive = true
 	$HUD/EarthHealth/EarthHealthBar.frame = earth_health
 	$HUD/StationHealth/StationHealthBar.frame = station_health

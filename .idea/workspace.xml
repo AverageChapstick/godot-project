@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="some fuel and damage balancing">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/PullWave.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/PullWave.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/Root.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Root.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/EarthGravity.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/EarthGravity.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Mouse.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Mouse.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Node.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Node.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/PullWave.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/PullWave.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/PullWaveSprite.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/PullWaveSprite.gd" afterDir="false" />
-    </list>
+    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="screen shake, minor bug fixes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -232,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669566893215</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="screen shake, minor bug fixes">
+      <created>1669569627029</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1669569627029</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,7 +245,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Screen size n stuff" />
     <MESSAGE value="Background" />
     <MESSAGE value="Earth" />
     <MESSAGE value="Centred" />
@@ -272,6 +269,7 @@
     <MESSAGE value="Push waves!" />
     <MESSAGE value="Pull waves!" />
     <MESSAGE value="some fuel and damage balancing" />
-    <option name="LAST_COMMIT_MESSAGE" value="some fuel and damage balancing" />
+    <MESSAGE value="screen shake, minor bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="screen shake, minor bug fixes" />
   </component>
 </project>
