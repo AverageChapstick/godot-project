@@ -4,7 +4,7 @@ var alive = false
 
 func _physics_process(_delta):
 	if alive:
-		if Input.is_action_pressed("right_click") and get_node("/root/Node").push_fuel:
+		if Input.is_action_pressed("right_click") and get_node("/root/Node").push_fuel > 0:
 			gravity = -500
 			get_node("/root/Node").use_push_fuel()
 			$PushWave.active = true
@@ -14,7 +14,7 @@ func _physics_process(_delta):
 			if not $PullSound.playing:
 				$PullSound.pitch_scale = rand_range(0.8, 1.1)
 				$PullSound.play()
-		elif Input.is_action_pressed("left_click") and get_node("/root/Node").pull_fuel:
+		elif Input.is_action_pressed("left_click") and get_node("/root/Node").pull_fuel > 0:
 			gravity = 500
 			get_node("/root/Node").use_pull_fuel()
 			$PullWave.active = true
