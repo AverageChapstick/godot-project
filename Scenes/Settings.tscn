@@ -1,0 +1,119 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Art/Theme/PixelTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/Settings.gd" type="Script" id=2]
+[ext_resource path="res://Art/buttons/ReturnIdle.png" type="Texture" id=3]
+[ext_resource path="res://Art/buttons/ReturnPressed.png" type="Texture" id=4]
+[ext_resource path="res://Art/Theme/SliderStick.png" type="Texture" id=5]
+[ext_resource path="res://Sounds/Hover.wav" type="AudioStream" id=15]
+[ext_resource path="res://Sounds/Start.wav" type="AudioStream" id=16]
+
+[node name="Settings" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -80, 28 )
+script = ExtResource( 2 )
+
+[node name="GridContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -94.0
+margin_top = -60.5
+margin_right = 102.0
+margin_bottom = 56.5
+rect_scale = Vector2( 0.619534, 0.619534 )
+rect_pivot_offset = Vector2( 94, 49 )
+
+[node name="VolumeLabel" type="Label" parent="GridContainer"]
+margin_right = 196.0
+margin_bottom = 12.0
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
+text = "Sound Fx Volume      50%"
+
+[node name="HSlider" type="HSlider" parent="GridContainer"]
+margin_top = 16.0
+margin_right = 196.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 97.2282, 8.78826 )
+theme = ExtResource( 1 )
+value = 50.0
+
+[node name="Sprite" type="Sprite" parent="GridContainer/HSlider"]
+show_behind_parent = true
+position = Vector2( 0.381248, 3.9459 )
+scale = Vector2( 2.14184, 2.14184 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Control" type="Control" parent="GridContainer"]
+margin_top = 36.0
+margin_right = 196.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="ScreenShake" type="CheckBox" parent="GridContainer"]
+margin_left = 13.0
+margin_top = 55.0
+margin_right = 183.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 170, 1 )
+rect_pivot_offset = Vector2( 84.2282, 18.3318 )
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme = ExtResource( 1 )
+pressed = true
+text = "Screen shake"
+
+[node name="Glow" type="CheckBox" parent="GridContainer"]
+margin_left = 13.0
+margin_top = 88.0
+margin_right = 183.0
+margin_bottom = 117.0
+rect_min_size = Vector2( 170, 1 )
+rect_pivot_offset = Vector2( 84.2282, 19.9129 )
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme = ExtResource( 1 )
+pressed = true
+text = "Glow"
+
+[node name="ReturnButton" type="TextureButton" parent="."]
+anchor_left = 0.059
+anchor_top = 0.892
+anchor_right = 0.059
+anchor_bottom = 0.892
+margin_left = -4.16
+margin_top = -5.42001
+margin_right = 4.84
+margin_bottom = 3.57999
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 4.76144, 4.76143 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -5.0
+
+[node name="Start" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="drag_ended" from="GridContainer/HSlider" to="." method="_on_HSlider_drag_ended"]
+[connection signal="drag_started" from="GridContainer/HSlider" to="." method="_on_HSlider_drag_started"]
+[connection signal="mouse_entered" from="GridContainer/HSlider" to="." method="_on_HSlider_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/HSlider" to="." method="_on_HSlider_mouse_exited"]
+[connection signal="value_changed" from="GridContainer/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="mouse_entered" from="GridContainer/ScreenShake" to="." method="_on_ScreenShake_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/ScreenShake" to="." method="_on_ScreenShake_mouse_exited"]
+[connection signal="pressed" from="GridContainer/ScreenShake" to="." method="_on_ScreenShake_pressed"]
+[connection signal="mouse_entered" from="GridContainer/Glow" to="." method="_on_Glow_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/Glow" to="." method="_on_Glow_mouse_exited"]
+[connection signal="pressed" from="GridContainer/Glow" to="." method="_on_Glow_pressed"]
+[connection signal="mouse_entered" from="ReturnButton" to="." method="_on_ReturnButton_mouse_entered"]
+[connection signal="mouse_exited" from="ReturnButton" to="." method="_on_ReturnButton_mouse_exited"]
+[connection signal="pressed" from="ReturnButton" to="." method="_on_ReturnButton_pressed"]

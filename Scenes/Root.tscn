@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Scripts/Node.gd" type="Script" id=1]
 [ext_resource path="res://Art/earth.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Scenes/Screenshake.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Sounds/Repel.wav" type="AudioStream" id=13]
 [ext_resource path="res://Sounds/Space.ogg" type="AudioStream" id=14]
+[ext_resource path="res://Scenes/Settings.tscn" type="PackedScene" id=15]
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.317647, 0.529412, 1 )
@@ -175,6 +176,9 @@ align = 1
 
 [node name="StartScreen" parent="." instance=ExtResource( 8 )]
 
+[node name="Settings" parent="." instance=ExtResource( 15 )]
+visible = false
+
 [node name="GameoverMessage" type="Label" parent="."]
 visible = false
 margin_left = -3.0
@@ -200,4 +204,8 @@ autoplay = true
 [connection signal="open_how_to_play" from="StartScreen" to="." method="_on_StartScreen_open_how_to_play"]
 [connection signal="open_settings" from="StartScreen" to="." method="_on_StartScreen_open_settings"]
 [connection signal="start_game" from="StartScreen" to="." method="_on_StartScreen_start_game"]
+[connection signal="return_pressed" from="Settings" to="." method="_on_Settings_return_pressed"]
+[connection signal="set_sound" from="Settings" to="." method="_on_Settings_set_sound"]
+[connection signal="toggled_glow" from="Settings" to="." method="_on_Settings_toggled_glow"]
+[connection signal="toggled_shake" from="Settings" to="." method="_on_Settings_toggled_shake"]
 [connection signal="timeout" from="SpawnRateTimer" to="." method="_on_SpawnRateTimer_timeout"]

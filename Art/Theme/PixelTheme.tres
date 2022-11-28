@@ -1,0 +1,27 @@
+[gd_resource type="Theme" load_steps=9 format=2]
+
+[ext_resource path="res://Art/new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Art/Theme/CheckBoxTicked.png" type="Texture" id=2]
+[ext_resource path="res://Art/Theme/CheckBoxUnticked.png" type="Texture" id=3]
+[ext_resource path="res://Art/Theme/SliderStick.png" type="Texture" id=4]
+[ext_resource path="res://Art/Theme/SliderHeadHover.png" type="Texture" id=5]
+[ext_resource path="res://Art/Theme/SliderHeadIdle.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[resource]
+default_font = ExtResource( 1 )
+CheckBox/colors/font_color = Color( 0.0117647, 0.972549, 0.592157, 1 )
+CheckBox/colors/font_color_disabled = Color( 0.0117647, 0.972549, 0.592157, 1 )
+CheckBox/colors/font_color_focus = Color( 0, 1, 0.603922, 1 )
+CheckBox/colors/font_color_hover = Color( 0.866667, 1, 0.945098, 1 )
+CheckBox/colors/font_color_pressed = Color( 0, 1, 0.603922, 1 )
+CheckBox/icons/checked = ExtResource( 2 )
+CheckBox/icons/unchecked = ExtResource( 3 )
+CheckBox/styles/focus = SubResource( 2 )
+HSlider/icons/grabber = ExtResource( 6 )
+HSlider/icons/grabber_highlight = ExtResource( 5 )
+HSlider/icons/tick = ExtResource( 4 )
+HSlider/styles/slider = SubResource( 3 )

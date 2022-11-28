@@ -2,6 +2,7 @@ extends Node
 
 signal big_screenshake
 signal small_screenshake
+var screen_shake_enabled = true
 
 var meteor_scene = preload("res://Scenes/Meteor.tscn")
 var meteor_speed = 50
@@ -38,7 +39,8 @@ func earth_hit():
 	if earth_health > 0:
 		earth_health -= randi() % 4 + 1
 		$HUD/EarthHealth/EarthHealthBar.frame = earth_health
-		emit_signal("big_screenshake")
+		if screen_shake_enabled:
+			emit_signal("big_screenshake")
 	if earth_health < 1:
 		$Earth.hide()
 		$Earth.set_collision_layer_bit(0, 0)
@@ -61,7 +63,8 @@ func earth_hit():
 func station_hit():
 	if station_health > 0:
 		station_health -= randi() % 4 + 1
-		emit_signal("small_screenshake")
+		if screen_shake_enabled:
+			emit_signal("small_screenshake")
 		$HUD/StationHealth/StationHealthBar.frame = station_health
 	if station_health < 1:
 		$MousePosition/KinematicBody2D.set_collision_layer_bit(0, 0)
@@ -94,6 +97,10 @@ func use_pull_fuel():
 func _on_EarthGravity_body_entered(body):
 	body.queue_free()
 
+func _on_SpawnRateTimer_timeout():
+	if $MeteorTimer.wait_time > 0.5:
+		$MeteorTimer.wait_time -= 0.005
+
 func _on_StartScreen_start_game():
 	$StartScreen.hide()
 	$Earth.show()
@@ -122,13 +129,27 @@ func _on_StartScreen_start_game():
 	$HUD/PullFuel/PullFuelBar.frame = pull_fuel
 	$MeteorTimer.start()
 	_on_MeteorTimer_timeout()
-	
+
 func _on_StartScreen_open_settings():
-	pass # Replace with function body.
+	$StartScreen.hide()
+	$Settings.show()
 
 func _on_StartScreen_open_how_to_play():
 	pass # Replace with function body.
 
-func _on_SpawnRateTimer_timeout():
-	if $MeteorTimer.wait_time > 0.5:
-		$MeteorTimer.wait_time -= 0.005
+func _on_Settings_return_pressed():
+	$Settings.hide()
+	$StartScreen.show()
+
+func _on_Settings_toggled_glow():
+	$WorldEnvironment.environment.glow_enabled = not $WorldEnvironment.environment.glow_enabled
+
+func _on_Settings_toggled_shake():
+	screen_shake_enabled = not screen_shake_enabled
+
+func _on_Settings_set_sound(value):
+	if not value:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), true)
+	else:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false)
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), value / 2 - 35)
