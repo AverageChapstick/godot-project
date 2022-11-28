@@ -142,12 +142,17 @@ func _on_StartScreen_open_settings():
 	$Settings.show()
 
 func _on_StartScreen_open_how_to_play():
-	pass # Replace with function body.
+	$StartScreen.hide()
+	$HowToPlayScreen.show()
 
 func _on_Settings_return_pressed():
 	$Settings.hide()
 	$StartScreen.show()
 
+func _on_HowToPlayScreen_return_pressed():
+	$HowToPlayScreen.hide()
+	$StartScreen.show()
+	
 func _on_Settings_toggled_glow():
 	$WorldEnvironment.environment.glow_enabled = not $WorldEnvironment.environment.glow_enabled
 

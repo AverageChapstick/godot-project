@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Art/buttons/ReturnIdle.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/HoToPlayScreen.gd" type="Script" id=2]
+[ext_resource path="res://Art/buttons/ReturnPressed.png" type="Texture" id=3]
+[ext_resource path="res://Art/HowToPlay.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/PushWave.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Art/Theme/PixelTheme.tres" type="Theme" id=6]
+[ext_resource path="res://Sounds/Start.wav" type="AudioStream" id=7]
+[ext_resource path="res://Sounds/Hover.wav" type="AudioStream" id=16]
+[ext_resource path="res://Scenes/PullWave.tscn" type="PackedScene" id=18]
+
+[node name="HowToPlayScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -111, -1 )
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 239.0
+margin_bottom = 135.0
+texture = ExtResource( 4 )
+stretch_mode = 1
+
+[node name="PushWave" parent="." instance=ExtResource( 5 )]
+position = Vector2( 206, 70 )
+
+[node name="PullWave" parent="." instance=ExtResource( 18 )]
+position = Vector2( 40, 85 )
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+volume_db = -5.0
+
+[node name="Start" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="ReturnButton" type="TextureButton" parent="."]
+anchor_left = 0.059
+anchor_top = 0.892
+anchor_right = 0.059
+anchor_bottom = 0.892
+margin_left = -4.16
+margin_top = -5.42001
+margin_right = 4.84
+margin_bottom = 3.57999
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 4.76144, 4.76143 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+
+[node name="VolumeLabel" type="Label" parent="."]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 140.0
+margin_bottom = 82.0
+rect_scale = Vector2( 0.680349, 0.680349 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
+text = "Quick, there are meteors
+hitting the earth!
+
+use gravity 
+to guard it"
+
+[connection signal="mouse_entered" from="ReturnButton" to="." method="_on_ReturnButton_mouse_entered"]
+[connection signal="mouse_exited" from="ReturnButton" to="." method="_on_ReturnButton_mouse_exited"]
+[connection signal="pressed" from="ReturnButton" to="." method="_on_ReturnButton_pressed"]

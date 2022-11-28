@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Scripts/Node.gd" type="Script" id=1]
 [ext_resource path="res://Art/earth.png" type="Texture" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Scenes/Settings.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Art/PixelEmulator-xq08.ttf" type="DynamicFontData" id=16]
 [ext_resource path="res://Art/Theme/PixelTheme.tres" type="Theme" id=17]
+[ext_resource path="res://Scenes/HowToPlayScreen.tscn" type="PackedScene" id=18]
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.317647, 0.529412, 1 )
@@ -207,6 +208,9 @@ autowrap = true
 [node name="Settings" parent="." instance=ExtResource( 15 )]
 visible = false
 
+[node name="HowToPlayScreen" parent="." instance=ExtResource( 18 )]
+visible = false
+
 [node name="GameoverMessage" type="Label" parent="."]
 visible = false
 margin_left = -3.0
@@ -252,4 +256,5 @@ autoplay = true
 [connection signal="set_sound" from="Settings" to="." method="_on_Settings_set_sound"]
 [connection signal="toggled_glow" from="Settings" to="." method="_on_Settings_toggled_glow"]
 [connection signal="toggled_shake" from="Settings" to="." method="_on_Settings_toggled_shake"]
+[connection signal="return_pressed" from="HowToPlayScreen" to="." method="_on_HowToPlayScreen_return_pressed"]
 [connection signal="timeout" from="SpawnRateTimer" to="." method="_on_SpawnRateTimer_timeout"]
