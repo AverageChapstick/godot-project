@@ -48,17 +48,22 @@ func earth_hit():
 		$HUD.hide()
 		$Score.hide()
 		$GameoverMessage.show()
+		$GameoverMessage/ScoreMessage.text = "it took " + str(score) + " meteors to destroy your earth!"
 		$MeteorTimer.stop()
 		yield(get_tree().create_timer(3.0), "timeout")
+		
 		$GameoverMessage.hide()
 		$StartScreen.show()
 		get_tree().call_group("meteors", "queue_free")
-		
 		$MousePosition.hide()
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		$MousePosition/MouseGravity.alive = false
 		$MousePosition/MouseGravity/PullWave.active = false
 		$MousePosition/MouseGravity/PushWave.active = false
+		$Highscore.show()
+		if score > high_score:
+			high_score = score
+			$Highscore.text = "current highscore: " + str(score)
 
 func station_hit():
 	if station_health > 0:
@@ -112,6 +117,8 @@ func _on_StartScreen_start_game():
 	push_fuel = 28
 	pull_fuel = 28
 	score = 0
+	$Highscore.hide()
+	$Score.show()
 	
 	$MeteorTimer.wait_time = 2
 	$SpawnRateTimer.start()

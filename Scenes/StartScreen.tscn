@@ -38,16 +38,16 @@ rect_pivot_offset = Vector2( -80, 28 )
 script = ExtResource( 5 )
 
 [node name="PushWave" parent="." instance=ExtResource( 17 )]
-position = Vector2( 218, 32 )
+position = Vector2( 218, 35 )
 
 [node name="PullWave" parent="." instance=ExtResource( 18 )]
-position = Vector2( 28, 32 )
+position = Vector2( 28, 35 )
 
 [node name="Gravity" type="Label" parent="."]
 margin_left = 20.0
-margin_top = 21.0
+margin_top = 24.0
 margin_right = 73.0
-margin_bottom = 33.0
+margin_bottom = 36.0
 rect_scale = Vector2( 1.66949, 1.66949 )
 theme = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0.466667, 1, 1 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Scripts/Node.gd" type="Script" id=1]
 [ext_resource path="res://Art/earth.png" type="Texture" id=2]
@@ -15,6 +15,8 @@
 [ext_resource path="res://Sounds/Repel.wav" type="AudioStream" id=13]
 [ext_resource path="res://Sounds/Space.ogg" type="AudioStream" id=14]
 [ext_resource path="res://Scenes/Settings.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Art/PixelEmulator-xq08.ttf" type="DynamicFontData" id=16]
+[ext_resource path="res://Art/Theme/PixelTheme.tres" type="Theme" id=17]
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.317647, 0.529412, 1 )
@@ -59,7 +61,16 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -64, -64, 0, 0, 0, 0, 1088, -64, 0, 0, 0, 0, 1088, 664, 0, 0, 0, 0, -64, 664, 0, 0, 0, 0, -64, -64 )
 }
 
+[sub_resource type="DynamicFont" id=14]
+size = 5
+outline_color = Color( 0, 1, 0.603922, 1 )
+use_filter = true
+font_data = ExtResource( 16 )
+
 [sub_resource type="Theme" id=12]
+default_font = ExtResource( 3 )
+
+[sub_resource type="Theme" id=13]
 default_font = ExtResource( 3 )
 
 [node name="Node" type="Node"]
@@ -174,6 +185,23 @@ text = "0
 "
 align = 1
 
+[node name="Highscore" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -76.0
+margin_top = 10.0
+margin_right = 76.0
+margin_bottom = 23.0
+rect_scale = Vector2( 0.978794, 0.978794 )
+theme = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0.490196, 0.984314, 1 )
+custom_fonts/font = SubResource( 14 )
+text = "current highscore: 0"
+align = 1
+valign = 1
+autowrap = true
+
 [node name="StartScreen" parent="." instance=ExtResource( 8 )]
 
 [node name="Settings" parent="." instance=ExtResource( 15 )]
@@ -182,15 +210,31 @@ visible = false
 [node name="GameoverMessage" type="Label" parent="."]
 visible = false
 margin_left = -3.0
-margin_top = -14.0
+margin_top = 21.0
 margin_right = 85.0
-margin_bottom = 13.0
+margin_bottom = 48.0
 rect_scale = Vector2( 2.81563, 2.81563 )
 theme = SubResource( 12 )
 custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
 text = "Game over"
 align = 1
 valign = 1
+
+[node name="ScoreMessage" type="Label" parent="GameoverMessage"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -42.0
+margin_top = 20.0
+margin_right = 126.0
+margin_bottom = 33.0
+rect_scale = Vector2( 0.499673, 0.499673 )
+theme = SubResource( 13 )
+custom_colors/font_color = Color( 0, 0.490196, 0.984314, 1 )
+custom_fonts/font = SubResource( 14 )
+text = "it took  meteors to destroy your earth!"
+align = 1
+valign = 1
+autowrap = true
 
 [node name="SpawnRateTimer" type="Timer" parent="."]
 
