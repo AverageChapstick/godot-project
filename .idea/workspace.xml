@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="Deleted something useless">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-27__6_32_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-27__6_32_p_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-27__6_41_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-27__6_41_p_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-27__6_47_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-27__6_47_p_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-27__7_29_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-27__7_29_p_m___Changes_.xml" afterDir="false" />
+    <list default="true" id="72164893-50db-4906-9ff8-953153074448" name="Changes" comment="Sound variation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scenes/PullWave.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/PullWave.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scenes/Root.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Root.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scenes/StartScreen.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/StartScreen.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Node.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Node.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/StartScreen.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/StartScreen.gd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,21 +258,35 @@
       <option name="project" value="LOCAL" />
       <updated>1669572029481</updated>
     </task>
-    <task id="LOCAL-00032" summary="Bugfix">
-      <created>1669573641113</created>
+    <task id="LOCAL-00032" summary="switch left and right click, meteor bug fixes">
+      <created>1669574237393</created>
       <option name="number" value="00032" />
       <option name="presentableId" value="LOCAL-00032" />
       <option name="project" value="LOCAL" />
-      <updated>1669573641113</updated>
+      <updated>1669574237393</updated>
     </task>
-    <task id="LOCAL-00033" summary="Deleted something useless">
-      <created>1669573928849</created>
+    <task id="LOCAL-00033" summary="difficulty curve">
+      <created>1669575814149</created>
       <option name="number" value="00033" />
       <option name="presentableId" value="LOCAL-00033" />
       <option name="project" value="LOCAL" />
-      <updated>1669573928849</updated>
+      <updated>1669575814149</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="clicking sounds and timer error fix">
+      <created>1669576649233</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1669576649233</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Sound variation">
+      <created>1669579054000</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1669579054000</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -290,8 +301,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Centred again" />
-    <MESSAGE value="Mouse" />
     <MESSAGE value="This commit should actually work" />
     <MESSAGE value="Gravity Prototype" />
     <MESSAGE value="Gravity Prototype (Better version)" />
@@ -313,8 +322,10 @@
     <MESSAGE value="Explosions" />
     <MESSAGE value="Explosion fix" />
     <MESSAGE value="Better Title" />
-    <MESSAGE value="Bugfix" />
-    <MESSAGE value="Deleted something useless" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted something useless" />
+    <MESSAGE value="switch left and right click, meteor bug fixes" />
+    <MESSAGE value="difficulty curve" />
+    <MESSAGE value="clicking sounds and timer error fix" />
+    <MESSAGE value="Sound variation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sound variation" />
   </component>
 </project>

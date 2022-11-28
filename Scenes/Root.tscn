@@ -87,15 +87,6 @@ script = ExtResource( 11 )
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 4 )
 
-[node name="Label" type="Label" parent="."]
-visible = false
-margin_right = 240.0
-margin_bottom = 24.0
-theme = SubResource( 5 )
-custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
-text = "Untitled Gravity Game"
-align = 1
-
 [node name="Controls" type="Label" parent="."]
 visible = false
 margin_top = 93.0
@@ -168,6 +159,19 @@ offset = 1695.68
 
 [node name="HUD" parent="." instance=ExtResource( 7 )]
 visible = false
+
+[node name="Score" type="Label" parent="."]
+visible = false
+margin_left = 92.0
+margin_top = 3.0
+margin_right = 126.0
+margin_bottom = 30.0
+rect_scale = Vector2( 1.7037, 1.7037 )
+theme = SubResource( 5 )
+custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
+text = "0
+"
+align = 1
 
 [node name="StartScreen" parent="." instance=ExtResource( 8 )]
 

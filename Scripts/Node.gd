@@ -9,6 +9,8 @@ var earth_health = 28
 var station_health = 28
 var push_fuel = 28
 var pull_fuel = 28
+var score = 0
+var high_score = 0
 
 func _ready():
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), -10)
@@ -28,6 +30,9 @@ func _on_MeteorTimer_timeout():
 	meteor.linear_velocity = rand_range(meteor_speed / 5, meteor_speed) * meteor.position.direction_to($Earth.position)
 	add_child(meteor)
 	meteor.add_to_group("meteors")
+	
+	score += 1
+	$Score.text = str(score)
 
 func earth_hit():
 	if earth_health > 0:
@@ -39,6 +44,7 @@ func earth_hit():
 		$Earth.set_collision_layer_bit(0, 0)
 		$Earth.set_collision_mask_bit(0, 0)
 		$HUD.hide()
+		$Score.hide()
 		$GameoverMessage.show()
 		$MeteorTimer.stop()
 		yield(get_tree().create_timer(3.0), "timeout")
@@ -92,11 +98,13 @@ func _on_StartScreen_start_game():
 	$StartScreen.hide()
 	$Earth.show()
 	$HUD.show()
+	$Score.show()
 	
 	earth_health = 28
 	station_health = 28
 	push_fuel = 28
 	pull_fuel = 28
+	score = 0
 	
 	$MeteorTimer.wait_time = 2
 	$SpawnRateTimer.start()

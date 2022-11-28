@@ -15,7 +15,7 @@ width = 150
 height = 150
 fill = 1
 fill_from = Vector2( 0.5, 0.5 )
-fill_to = Vector2( 0.5, 1 )
+fill_to = Vector2( 0.5, 0.5 )
 
 [node name="PullWave" type="Node2D"]
 scale = Vector2( 1.15, 1.15 )
