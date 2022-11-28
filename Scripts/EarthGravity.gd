@@ -12,6 +12,7 @@ func _physics_process(_delta):
 			for wave in $PullWave.waves:
 				wave.wave_speed = 0.02
 			if not $PullSound.playing:
+				$PullSound.pitch_scale = rand_range(0.8, 1.1)
 				$PullSound.play()
 		elif Input.is_action_pressed("left_click") and get_node("/root/Node").pull_fuel:
 			gravity = 500
@@ -22,6 +23,7 @@ func _physics_process(_delta):
 				wave.wave_speed = 0.007
 			$PushWave.active = false
 			if not $PushSound.playing:
+				$PullSound.pitch_scale = rand_range(0.8, 1.1)
 				$PushSound.play()
 		else:
 			gravity = 100

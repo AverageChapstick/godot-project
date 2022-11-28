@@ -61,9 +61,11 @@ theme = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 1, 0.603922, 1 )
 text = "Quick, there are meteors
 hitting the earth!
-
 use gravity 
-to guard it"
+to guard it
+
+also, don't 
+get hit yourself."
 
 [connection signal="mouse_entered" from="ReturnButton" to="." method="_on_ReturnButton_mouse_entered"]
 [connection signal="mouse_exited" from="ReturnButton" to="." method="_on_ReturnButton_mouse_exited"]

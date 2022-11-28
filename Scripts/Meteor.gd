@@ -27,7 +27,7 @@ func despawn():
 	angular_damp = 10
 	$Sprite.visible = false
 	$Particles2D.emitting = true
-	$Explosion.volume_db = rand_range(-3, 5)
+	$Explosion.volume_db = rand_range(-5, 0)
 	$Explosion.pitch_scale = rand_range(1, 2)
 	$Explosion.playing = true
 	set_collision_layer_bit(0, 0)
